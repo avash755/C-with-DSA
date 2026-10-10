@@ -104,25 +104,155 @@ using namespace std;
 // }
 
 
+////////////////////////////////////////////////// DAY 2 (10-10-2026)
+
+
 ///// Triangle Pattern letters
 
+// int main(){
+//     int n = 7;
+//     char ch = 'A';
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j <= i; j++){
+//             cout << ch << " ";
+//         }
+//         ch = ch + 1;
+//         cout << "\n";
+//     }
+//     return 0;
+// }
+
+
+///// Triangle Pattern with number incrase 1, 12, 123, 1234
+
+// int main(){
+//     int n = 7;
+//     for(int i = 0; i < n; i++){
+//         int num = 1;
+//         for(int j = 0; j <= i; j++){
+//             cout << num << " ";
+//             num++;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+/// YT way->
+
+// int main(){
+//     int n = 4;
+//     for(int i = 0; i < n; i++){
+//         for(int j = 1; j <= i + 1; j++){
+//             cout << j << " ";
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+///// Triangle Pattern (REVERSE) 
+
+// int main(){
+//     int n = 11;
+//     for(int i = 1; i <= n; i++){
+//         for(int j = i; j > 0; j--){
+//             cout << j << " ";
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+///// Triangle Pattern (REVERSE) with letters
+
+// int main(){
+//     int n = 9;
+//     for(int i = 0; i < n; i++){
+//         char ch = 'A';
+//         ch = ch + i;
+//         for(int j = i; j >= 0; j--){
+//             cout << ch << " ";
+//             ch = ch - 1;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+///// Floyds Triangle Pattern 1 23 456 78910
+
+// int main(){
+//     int n = 8, num = 1;
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j <= i; j++){
+//             cout << num << " ";
+//             num++;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+///// Floyd's Triangle Pattern with letters
+
+// int main(){
+//     int n = 4;
+//     char ch = 'A';
+//     for(int i = 0; i < n; i++){
+//         for(int j = 1; j <= i + 1; j++){
+//             cout << ch << " ";
+//             ch = ch + 1;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+
+/////  Inverted Triangel Pattern 1111 222 33 4 YT HELP
+
+// int main(){
+//     int n = 4;
+//     for(int i = 0; i < n; i++){
+//         /// SPACE *****
+//         for(int j = 0; j < i; j++){
+//             cout << " ";
+//         }
+//         /// NUMBER
+//         for(int j = 0; j < n - i; j++){
+//             cout << i + 1;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+
+
+///// Inverted Triangel pattern with Letters
+
 int main(){
-    int n = 7;
+    int n = 4;
     char ch = 'A';
     for(int i = 0; i < n; i++){
-        for(int j = 0; j <= i; j++){
-            cout << ch << " ";
+        for(int j = 0; j < i; j++){
+            cout << " ";
+        }
+        for(int j = 0; j < n - i; j++){
+            cout << ch;
         }
         ch = ch + 1;
-        cout << "\n";
+        cout << endl;
     }
+    
     return 0;
 }
-
-
-
-
-
 
 
 
