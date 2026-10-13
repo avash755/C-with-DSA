@@ -295,11 +295,56 @@ int main(){
         }
         /// star
         cout << "*";
-        /// space 2
-        for(int j = 0; j < i; j++){
+        // /// space 2
+        // for(int j = 0; j < i; j++){
+        //     cout << " ";
+        // }
+        // ////// SIDE 2
+        // for(int j = 0; j < i - 1; j++){
+        //     if(j > i)break;
+        //     cout << " ";
+        // }
+        // /// print 3 star
+        // for(int i = )
+        // cout << "\n";
+
+        if(i != 0){
+            /// space
+            for(int j = 0; j < 2*i-1; j++){
+                cout << " ";
+            }
+            /// star
+            cout << "*";
+        }
+        cout << "\n";
+    }
+
+    //// bottom
+    for(int i = 0; i < n-1; i++){
+        // /// space
+        // for(int j = 0; j < i; j++){
+        //     cout << " ";
+        for(int j = 0; j < i + 1; j++){
             cout << " ";
         }
-        ////// SIDE 2
+        // }
+        // /// start
+        cout << "*";
+         
+        if(i != n - 2){
+        //     /// space
+        //     for(int j = 0; j < 2*i - 1; j++){
+        //         cout << " ";
+        //     }
+        ////// MAIN LOGIC 2 * (n-2-i) - i
+        for(int j = 0; j < 2*(n-i)-5; j++){
+            cout << " ";
+        }
+        //     /// start
+            cout << "*";
+        }
+        
+
         
         cout << "\n";
     }
