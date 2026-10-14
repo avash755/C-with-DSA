@@ -285,68 +285,116 @@ using namespace std;
 
 ///// Hollow Diamond Pattern 
 
-int main(){
-    int n = 4;
-    for(int i = 0; i < n; i++){
-        ////// SIDE 1
-        ///space
-        for(int j = 0; j < n - i - 1; j++){
-            cout << " ";
-        }
-        /// star
-        cout << "*";
-        // /// space 2
-        // for(int j = 0; j < i; j++){
-        //     cout << " ";
-        // }
-        // ////// SIDE 2
-        // for(int j = 0; j < i - 1; j++){
-        //     if(j > i)break;
-        //     cout << " ";
-        // }
-        // /// print 3 star
-        // for(int i = )
-        // cout << "\n";
+// int main(){
+//     int n = 4;
+//     for(int i = 0; i < n; i++){
+//         ////// SIDE 1
+//         ///space
+//         for(int j = 0; j < n - i - 1; j++){
+//             cout << " ";
+//         }
+//         /// star
+//         cout << "*";
+//         // /// space 2
+//         // for(int j = 0; j < i; j++){
+//         //     cout << " ";
+//         // }
+//         // ////// SIDE 2
+//         // for(int j = 0; j < i - 1; j++){
+//         //     if(j > i)break;
+//         //     cout << " ";
+//         // }
+//         // /// print 3 star
+//         // for(int i = )
+//         // cout << "\n";
 
-        if(i != 0){
-            /// space
-            for(int j = 0; j < 2*i-1; j++){
-                cout << " ";
-            }
-            /// star
-            cout << "*";
-        }
-        cout << "\n";
-    }
+//         if(i != 0){
+//             /// space
+//             for(int j = 0; j < 2*i-1; j++){
+//                 cout << " ";
+//             }
+//             /// star
+//             cout << "*";
+//         }
+//         cout << "\n";
+//     }
 
-    //// bottom
-    for(int i = 0; i < n-1; i++){
-        // /// space
-        // for(int j = 0; j < i; j++){
-        //     cout << " ";
-        for(int j = 0; j < i + 1; j++){
-            cout << " ";
-        }
-        // }
-        // /// start
-        cout << "*";
+//     //// bottom
+//     for(int i = 0; i < n-1; i++){
+//         // /// space
+//         // for(int j = 0; j < i; j++){
+//         //     cout << " ";
+//         for(int j = 0; j < i + 1; j++){
+//             cout << " ";
+//         }
+//         // }
+//         // /// start
+//         cout << "*";
          
-        if(i != n - 2){
-        //     /// space
-        //     for(int j = 0; j < 2*i - 1; j++){
-        //         cout << " ";
-        //     }
-        ////// MAIN LOGIC 2 * (n-2-i) - i
-        for(int j = 0; j < 2*(n-i)-5; j++){
-            cout << " ";
-        }
-        //     /// start
-            cout << "*";
-        }
+//         if(i != n - 2){
+//         //     /// space
+//         //     for(int j = 0; j < 2*i - 1; j++){
+//         //         cout << " ";
+//         //     }
+//         ////// MAIN LOGIC 2 * (n-2-i) - i
+//         for(int j = 0; j < 2*(n-i)-5; j++){
+//             cout << " ";
+//         }
+//         //     /// start
+//             cout << "*";
+//         }
         
 
         
-        cout << "\n";
-    }
-    return 0;
+//         cout << "\n";
+//     }
+//     return 0;
+// }
+
+
+////// Butterfly Pattern 
+
+int main(){
+   int n = 4;
+   int temp = ((n-1)*2); /// for space
+   for(int i = 0; i < n; i++){
+      /// side 1 (star)
+      for(int j = 0; j < i + 1; j++){
+         cout << "*";
+      }
+      /// side 2 & 3 (Space)
+      if(i != n - 1){
+         for(int j = 0; j < temp ; j++){
+            cout << " ";
+         }
+         temp = temp - 2;
+      }
+      /// side 4 (star)
+      for(int j = 0; j < i + 1; j++){
+         cout << "*";
+      }
+
+      cout << "\n";
+   }
+   return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
