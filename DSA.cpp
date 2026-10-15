@@ -355,7 +355,7 @@ using namespace std;
 ////// Butterfly Pattern 
 
 int main(){
-   int n = 4;
+   int n = 11;
    int temp = ((n-1)*2); /// for space
    for(int i = 0; i < n; i++){
       /// side 1 (star)
@@ -373,7 +373,22 @@ int main(){
       for(int j = 0; j < i + 1; j++){
          cout << "*";
       }
-
+      cout << "\n";
+   }
+      ////// 2nd half
+   for(int i = 0; i < n; i++){
+      /// side 5 (star)
+      for(int j = 0; j < n - i; j++){
+         cout << "*";
+      }
+      /// side 6 & 7 (space)
+      for(int j = 0; j < i * 2; j++){
+         cout << " ";
+      }
+      /// side 8 (star)
+      for(int j = 0; j < n - i; j++){
+         cout << "*";
+      }
       cout << "\n";
    }
    return 0;
