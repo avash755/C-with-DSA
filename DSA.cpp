@@ -354,62 +354,117 @@ using namespace std;
 
 ////// Butterfly Pattern 
 
-int main(){
-   int n = 11;
-   int temp = ((n-1)*2); /// for space
-   for(int i = 0; i < n; i++){
-      /// side 1 (star)
-      for(int j = 0; j < i + 1; j++){
-         cout << "*";
-      }
-      /// side 2 & 3 (Space)
-      if(i != n - 1){
-         for(int j = 0; j < temp ; j++){
-            cout << " ";
-         }
-         temp = temp - 2;
-      }
-      /// side 4 (star)
-      for(int j = 0; j < i + 1; j++){
-         cout << "*";
-      }
-      cout << "\n";
-   }
-      ////// 2nd half
-   for(int i = 0; i < n; i++){
-      /// side 5 (star)
-      for(int j = 0; j < n - i; j++){
-         cout << "*";
-      }
-      /// side 6 & 7 (space)
-      for(int j = 0; j < i * 2; j++){
-         cout << " ";
-      }
-      /// side 8 (star)
-      for(int j = 0; j < n - i; j++){
-         cout << "*";
-      }
-      cout << "\n";
-   }
-   return 0;
-}
+// int main(){
+//    int n = 11;
+//    int temp = ((n-1)*2); /// for space
+//    for(int i = 0; i < n; i++){
+//       /// side 1 (star)
+//       for(int j = 0; j < i + 1; j++){
+//          cout << "*";
+//       }
+//       /// side 2 & 3 (Space)
+//       if(i != n - 1){
+//          for(int j = 0; j < temp ; j++){
+//             cout << " ";
+//          }
+//          temp = temp - 2;
+//       }
+//       /// side 4 (star)
+//       for(int j = 0; j < i + 1; j++){
+//          cout << "*";
+//       }
+//       cout << "\n";
+//    }
+//       ////// 2nd half
+//    for(int i = 0; i < n; i++){
+//       /// side 5 (star)
+//       for(int j = 0; j < n - i; j++){
+//          cout << "*";
+//       }
+//       /// side 6 & 7 (space)
+//       for(int j = 0; j < i * 2; j++){
+//          cout << " ";
+//       }
+//       /// side 8 (star)
+//       for(int j = 0; j < n - i; j++){
+//          cout << "*";
+//       }
+//       cout << "\n";
+//    }
+//    return 0;
+// }
 
+///////////////////////////////////////////////////////////////// CHAPTER 5 (16-10-2026)
 
+/// how function works - I already know it so, I will skip it but I will write the practice questions of function chapter.
 
+// Qs 1. Write a function that takes sum of numbers 1 to n
 
+// void sumN(int x){
+//    int sum = 0;
+//    for(int i = 1; i <= x; i++){
+//       sum += i;
+//    }
+//    cout << sum;
+// }
 
+// int main(){
+//    sumN(5);
+//    return 0;
+// }
 
+//// Qs 2 calculate n function 
 
+// void facN(int x){
+//    int factorial = 1;
+//    for(int i = 1; i <= x; i++){
+//       factorial *= i;
+//    }
+//    cout << factorial;
+// }
+// int main(){
+//    facN(5);
+//    return 0;
+// }
 
+//// Q3: Calculate the sum of digits of a number. 
 
+// void digN(int num){
+//    int sum = 0;
+//    for(int i = 0; ;i++){
+//       if(num == 0)break;
+//       sum += (num % 10);
+//       num /= 10;
+//    }
+//    cout << sum;
+// }
+// int main(){
+//    digN(14735);
+//    return 0;
+// }
 
+//// Qs 4 calculating nCr binomial coefficient for n and r 
 
+// int facN(int n, int s){
+//    int sum = 1;
+//    for(int i = n; i >= s; i--){
+//       sum *= i;
+//    }
+//    return sum;
+// }
+// void nCr(int n, int r){
+//    int facto1, facto2, answer,stop;
+//    stop = (n - r) + 1; // 7
+//    facto1 = facN(n , stop);
+//    facto2 = facN(r, 1);
+//    answer = facto1 / facto2;
+//    cout << answer;
+// }
+// int main(){
+//    nCr(5, 4);
+//    return 0;
+// }
 
-
-
-
-
-
-
+////Homework questions 1: Check if a number is prime or not. 
 
 
