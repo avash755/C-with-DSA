@@ -466,5 +466,273 @@ using namespace std;
 // }
 
 ////Homework questions 1: Check if a number is prime or not. 
+// Time - 17/10/2026
+
+// void prime(int n){
+//     int isPrime = 1;
+//     for(int i = 2; i < n; i++){
+//         if(n % i == 0){
+//             cout << "It's not a prime number.";
+//             isPrime = 0;
+//             break;
+//         }
+//     }
+//     if(isPrime){
+//         cout << "It's a prime number.";
+//     }
+// }
+// int main(){
+//     prime(39);
+//     return 0;
+// }
+
+////Homework questions 2: print all prime numbers from 2 to n
+
+// Time - 18/10/2026 + gpt help little :(
+
+// void pNums(int n){
+//     for(int i = 2; i < n; i++){
+//         bool isPrime = true;
+//         for(int j = 2; j < i; j++){
+//             if(i % j == 0){
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//         if(isPrime){
+//             cout << i << " ";
+//         }
+//     }
+// }
+// int main(){
+//     pNums(100);
+//     return 0;
+// }
+
+////Homework questions 3: print nth Fibonacchi;
+
+// long long Fib(int n){
+//     // long long F0 = 0, F1 = 1, F3 = 0;
+//     // cout << 0 << " " << 1 << " ";
+//     // for(int i = 0; i < n - 2; i++){
+//     //     F3 = F0 + F1;
+//     //     F0 = F1;
+//     //     F1 = F3;
+//     //     cout << F3 << " ";
+//     // }
+//     if(n == 0) return 0;
+//     if(n == 1) return 1;
+//     return Fib(n-1) + Fib(n-2);
+// }
+// int main(){
+//     cout << Fib(50);
+//     return 0;
+// }
+
+///////////////////////////////////////////////////////////////// CHAPTER 6 (19-10-2026)
+
+//// Decimal to Binary
+
+// void decToBinary(int decNum){
+//     int ans = 0, pow = 1, rem = 0;
+//     while(decNum > 0){
+//         rem = decNum % 2;
+//         decNum /= 2;
+//         ans += (rem * pow);
+//         pow *= 10;
+//     }
+//     cout << ans;
+// }
+
+// int main(){
+//     decToBinary(54);
+//     return 0;
+// }
+
+///// Binary to Decimal
+
+// int binToDec(int binNum){
+//     int ans = 0, pow = 1, rem = 0;
+//     while(binNum > 0){
+//         rem = binNum % 10;
+//         ans += rem * pow;
+//         pow *= 2;
+//         binNum /= 10;
+//     }
+//     return ans;
+// }
+// int main(){
+//     cout << binToDec(101010);
+//     return 0;
+// }
+
+////Homework questions 1: Convert -8 and -12 to binary & reverse it (19-10-2008)
+
+// int DecToNegBin(int negDec){
+//     /// Convert to Binary 
+//     int ans = 0, pow = 1, rem = 0, decNum;
+//     string toStr = to_string(negDec);
+//     int length = toStr.length();
+
+//     /// If the decimal is a negative number 
+//     if(toStr[0] == '-'){
+//         string newStr = " ";
+//         for(int i = 0, j = 1; j < length; i++, j++){
+//             newStr[i] = toStr[j];
+//         }
+//         decNum = stoi(newStr);
+//     }
+//     else{
+//         decNum = negDec;
+//     }
+//     while(decNum > 0){
+//         rem = decNum % 2;
+//         ans += rem * pow;
+//         decNum /= 2;
+//         pow *= 10;
+//     }
+
+//     //// Second step: prefix with a 0. 
+//     string tempStr = to_string(ans);
+//     string preStr = "0";
+//     preStr += tempStr;
+
+//     ////Third step: fast compliment 
+//     for(int i = 0; i <= sizeof(ans); i++){
+//         if(preStr[i] == '0')preStr[i] = '1';
+//         else{preStr[i] = '0';}
+//     }
+
+//     ////4-step: add one at the end. 
+//     int preNum = stoi(preStr);
+//     int stay = 0, carry = 0, size = preStr.length();
+
+//     for(int i = size - 1; i >= 0; i--){
+//         stay = preNum % 10;
+
+//         if(stay == 1){
+//             preStr[i] = '0';
+//         }
+//         else{
+//             preStr[i] = '1';
+//             break;
+//         }
+//         preNum /= 10;
+//     }
+    
+//     return stoi(preStr);
+// }
+// int NegBinToDec(int Bin){
+//     //// Step 1: Convert to first complement. 
+//     string tempStr = to_string(Bin);
+//     int size = tempStr.length();
+//     for(int i = 0; i < size; i++){
+//         if(tempStr[i] == '1')tempStr[i] = '0';
+//         else{tempStr[i] = '1';}
+//     }
+
+//     //// Step 2: Add one at the end. 
+//     for(int i = size - 1; i >= 0; i--){
+//         if(tempStr[i] == '1'){
+//             tempStr[i] = '0';
+//         }
+//         else{
+//             tempStr[i] = '1';
+//             break;
+//         }
+//     } 
+//     //// Step 3: Convert to a decimal number. 
+//     int ans = 0, rem = 0, pow = 1, tempNum = stoi(tempStr);
+//     while(tempNum > 0){
+//         rem = tempNum % 10;
+//         ans += rem * pow;
+//         pow *= 2;
+//         tempNum /= 10;
+//     }
+//     return ans;
+
+// }
+// int main(){
+//     int negBin = DecToNegBin(-8);
+//     int negDec = NegBinToDec(negBin);
+//     cout << negBin << endl;
+//     cout << "-" << negDec << endl;
+//     return 0;
+// }
+
+///////////////////////////////////////////////////////////////// CHAPTER 7 (20-10-2026)
+
+// int main(){
+//     int a = 4, b = 10;
+//     /// Bitwise & Operator
+//     cout << (a & b) << endl;
+//     /// Bitwise | Operator 
+//     cout << (a | b) << endl;
+//     /// Bitwise ^ Operator 
+//     cout << (a ^ b) << endl;
+//     /// Bitwise << Operator 
+//     cout << (b << 2) << endl;
+//     /// Bitwise >> Operator 
+//     cout << (b >> 2) << endl;
+//     return 0;  
+// }
+
+//// Homework questions:
+
+/// Solve for 6 & 10, 6 | 10, 6 ^ 10
+// int main(){
+//     cout << (6 & 10) << endl;
+//     cout << (6 | 10) << endl;
+//     cout << (6 ^ 10) << endl;
+//     return 0;
+// }
+
+/// Solve for 10 << 2, 10 >> 1
+// int main(){
+//     cout << (10 << 2) << endl;
+//     cout << (10 >> 1) << endl;
+//     return 0;
+// }
+
+//// Next topic Operator precedence 
+
+/// Long short long long signed unsigned
+
+//// Homework questions
+//// Question 1: Figure out how to find if a number is a power of two without any loop. 
+// bool powOf2(int n){
+//     return n > 0 && (n & (n-1)) == 0; /// I used ChatGPT. 
+// }
+
+// int main(){
+//     cout << powOf2(31);
+//     return 0;
+// }
+
+//// Question 2: WTF to reverse an integer. 
+
+// void reverseN(int n){
+//     int newN = 0, rem, size = to_string(n).size() - 1, pow = 1;
+    
+//     while(size > 0){
+//         pow *= 10;
+//         size--;
+//     }
+//     while(n > 0){
+//         rem = n % 10;
+//         newN += rem * pow;
+//         pow /= 10;
+//         n /= 10;
+//     }
+//     cout << newN << endl;
+// }
+// int main(){
+//     reverseN(95775);
+//     return 0;
+// }
+
+
+
+
 
 
