@@ -732,7 +732,135 @@ using namespace std;
 // }
 
 
+///////////////////////////////////////////////////////////////// CHAPTER 8 (21-10-2026)
 
+//// Solve that problem: loops on arrays. Find smallest, largest in array
 
+// int main(){
+//     int arr[] = {5,3,1,65,3};
+//     int sm, lr, size = (sizeof(arr) / 4);
+    /// My code:
+    // sm = arr[0]
+    // lr = arr[0]
+    // for(int i = 0; i < size; i++){
+    //     if(sm > arr[i]){
+    //         sm = arr[i];
+    //     }
+    //     if(lr < arr[i]){
+    //         lr = arr[i];
+    //     }
+    // }
 
+    /// Mam's Code
+//     lr = INT_MIN; sm = INT_MAX;
+//     for(int i = 0; i < size; i++){
+//         if(sm > arr[i]){
+//             sm = arr[i];
+//         }
+//         if(lr < arr[i]){
+//             lr = arr[i];
+//         }
+//     }
+//     cout << sm << endl;
+//     cout << lr << endl;
+//     return 0;
+// }
 
+///// Next, pro linear search. Find a target value
+
+// int main(){
+//     int arr[] = { 4, 2, 7, 8, 1, 2, 6};
+//     int size = 7, target = 85, finded = 1;
+//     for(int i = 0; i < size; i++){
+//         if(target == arr[i]){
+//             cout << arr[i];
+//             finded = 0;
+//         }
+//     }
+//     if(finded)cout << (-1);
+    
+// }
+
+/////  Reverse an array without coping it.
+
+// int main(){
+//     int arr[] = {4,2,7,8,1,2,5}, size = 7;
+//     int start = 0, end = size - 1;
+    
+//     while (start <= end){
+//         swap(arr[start], arr[end]);
+//         start++; end--;
+//     }
+    
+//     for(int i = 0; i < size; i++){
+//         cout << arr[i] << endl; 
+//     }
+//     return 0;
+// }
+
+void sumAp(int arr[], int size){
+    int sum = 0, product = 1;
+    for(int i = 0; i < size; i++){
+        sum += arr[i];
+        product *= arr[i];
+    }
+    cout << sum <<endl << product << endl;
+}
+void swapMaAmi(int arr[], int size){
+    int max = INT_MIN, min = INT_MAX, minN, maxN;
+    for(int i = 0; i < size; i++){
+        if(min > arr[i]){
+            min = arr[i];
+            minN = i;
+        }
+        if(max < arr[i]){
+            max = arr[i];
+            maxN = i;
+        }
+    }
+    swap(arr[minN], arr[maxN]);
+    
+    for(int i = 0; i < size; i++){
+        cout << arr[i] << " ";
+    }
+}
+void uniP(int arr[], int size){
+    bool unique;
+    for(int i = 0; i < size; i++){
+        unique = true;
+        for(int j = 0; j < size; j++){
+            if(i != j && arr[i] == arr[j]){
+                unique = false;
+                break;
+            }
+        }
+        if(unique){
+            cout << arr[i];
+        }
+    }
+}
+void sameN(int arr1[], int arr2[], int s1, int s2){
+
+    for(int i = 0; i < s1; i++){
+        for(int j = 0; j < s2; j++){
+            if(arr1[i] == arr2[j]){
+                cout << arr1[i];
+                break;
+            }
+        }
+    }
+}
+int main(){
+    int arr1[] = {1,2,3,4,5,1,2};
+    int arr2[] = {3,5,1,6};
+    ///// HW. Question number 1: Calculate the sum and product of all numbers in an array. 
+    // sumAp(arr1, 7);
+    ///// HW. swap the max to min number of an array
+    // swapMaAmi(arr1, 7);
+    ///// HW. Print all the unique values in an array. 
+    // uniP(arr2, 4);
+    ///// HW. print same number from both arrays;
+    sameN(arr1, arr2, 7, 4);
+
+    return 0;
+}
