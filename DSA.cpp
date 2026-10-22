@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
 /// Square Pattern with number
 
@@ -798,69 +798,114 @@ using namespace std;
 //     return 0;
 // }
 
-void sumAp(int arr[], int size){
-    int sum = 0, product = 1;
-    for(int i = 0; i < size; i++){
-        sum += arr[i];
-        product *= arr[i];
-    }
-    cout << sum <<endl << product << endl;
-}
-void swapMaAmi(int arr[], int size){
-    int max = INT_MIN, min = INT_MAX, minN, maxN;
-    for(int i = 0; i < size; i++){
-        if(min > arr[i]){
-            min = arr[i];
-            minN = i;
-        }
-        if(max < arr[i]){
-            max = arr[i];
-            maxN = i;
-        }
-    }
-    swap(arr[minN], arr[maxN]);
+// 
+
+///////////////////////////////////////////////////////////////// CHAPTER 9 (22-10-2026)
+///// vector
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+    // vector <int> num = {1,5,2,3,7};
+    // vector <int> n(3,5);
+
+    // for(int x : num){
+    //     cout << x << endl;
+    // }
+    // for(int x : n){
+    //     cout << x << endl;
+    // }
+
+//     vector <int> n;
+//     n.push_back(0);
+//     n.push_back(1);
+//     n.push_back(2);
+//     n.push_back(3);
+//     n.push_back(4);
+
+//     cout << n.capacity() << endl;
+//     cout << n.size() << endl;
+//     return 0;
+// }
+
+///// Practice QS 
+
+// #include<iostream>
+// #include<vector> 
+// using namespace std;
+
+// int main(){
+//     vector <int> nums = {1,2,4,1,2};
+//     //// realy bad don't use it again. :|
+//     // for(int x = 0; x < nums.size(); x++){
+//     //     int p = 1;
+//     //     for(int y = 0; y < nums.size(); y++){
+//     //         if(x != y && nums[x] == nums[y]){
+//     //             p = 0;
+//     //             break;
+//     //         }
+//     //     }
+//     //     if(p){
+//     //         cout << nums[x];
+//     //     }
+//     // }
+//     //// use this only for now on :)
+//     int ans = 0;
+//     for(int v : nums){
+//         ans ^= v;
+//     }
+//     cout << ans << endl;
+//     return 0;
+// }
+
+//// Homework questions to solve 
+/// Question number 1: Linear search with vector.
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector <int> num = {1,5,3,2,6,8};
+//     int target = 22, idx = 0, found = 0;
+
+//     for(int x : num){
+//         if(target == x){
+//             found = 1;break;
+//         }
+//         idx++;
+//     }
+//     if(found){
+//         cout << "Target finded index: " << idx << endl;
+//     }
+//     else{cout << "Not found" << endl;}
     
-    for(int i = 0; i < size; i++){
-        cout << arr[i] << " ";
-    }
-}
-void uniP(int arr[], int size){
-    bool unique;
-    for(int i = 0; i < size; i++){
-        unique = true;
-        for(int j = 0; j < size; j++){
-            if(i != j && arr[i] == arr[j]){
-                unique = false;
-                break;
-            }
-        }
-        if(unique){
-            cout << arr[i];
-        }
-    }
-}
-void sameN(int arr1[], int arr2[], int s1, int s2){
+//     return 0;
+// }
 
-    for(int i = 0; i < s1; i++){
-        for(int j = 0; j < s2; j++){
-            if(arr1[i] == arr2[j]){
-                cout << arr1[i];
-                break;
-            }
-        }
-    }
-}
-int main(){
-    int arr1[] = {1,2,3,4,5,1,2};
-    int arr2[] = {3,5,1,6};
-    ///// HW. Question number 1: Calculate the sum and product of all numbers in an array. 
-    // sumAp(arr1, 7);
-    ///// HW. swap the max to min number of an array
-    // swapMaAmi(arr1, 7);
-    ///// HW. Print all the unique values in an array. 
-    // uniP(arr2, 4);
-    ///// HW. print same number from both arrays;
-    sameN(arr1, arr2, 7, 4);
+/// Question 2: Reverse the vector. Use a function. 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
 
-    return 0;
-}
+// void rev(vector <int> &nums){
+//     int start = 0, end = nums.size() - 1;
+
+//     while(start <= end){
+//         swap(nums[start], nums[end]);
+//         start++; 
+//         end--;
+//     }
+//     cout << "In the Function: ";
+//     for(int x : nums){
+//         cout << x << " ";
+//     }
+// }
+// int main(){
+//     vector <int> nums = {0, 4, 9, 2};
+
+//     rev(nums);
+//     return 0;
+// }
