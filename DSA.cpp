@@ -909,3 +909,60 @@
 //     rev(nums);
 //     return 0;
 // }
+
+
+///////////////////////////////////////////////////////////////// CHAPTER none Kadane's Algorithm (24-10-2026)
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int subArr[] = {3, -4, 5, 4, -1, 7, -8};
+//     int n = sizeof(subArr) / 4;
+    
+    // for(int str = 0; str < n; str++){
+    //     for(int end = str; end < n; end++){
+    //         for(int i = str; i <= end; i++){
+    //             cout << subArr[i];
+    //         }
+    //         cout << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    ///// With Brute force + sum
+
+    // int maxSum = 0;
+    // for(int st = 0; st < n; st++){
+    //     int currentSum = 0;
+    //     for(int ed = st; ed < n; ed++){
+    //         currentSum += subArr[ed];
+    //         maxSum = max(currentSum, maxSum);
+    //     }
+    // }
+    // cout << "Max Subarray Sum: " << maxSum << endl;
+    // return 0;
+// }
+    
+///// Same question, but with Kadane's Algorithm (Most optimized)
+
+// #include<iostream>
+// #include<vector>
+// #include<climits> /// for INT_MIN;
+// using namespace std;
+
+// int main(){
+//     vector <int> arr = {3, -4, 5, 4, -1, 7, -8};
+//     int n = arr.size();
+
+//     int curSum = 0, maxSum = INT_MIN;
+//     for(int v : arr){
+//         curSum += v;
+//         maxSum = max(curSum, maxSum);
+//         if(curSum < 0){
+//             curSum = 0;
+//         }
+//     }
+//     cout << "Max Subarray Sum with KADANE'S ALGORITHM: " << maxSum << endl;
+//     return 0;
+// }
